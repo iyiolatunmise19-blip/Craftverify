@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Artisans — CraftVerify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo">CraftVerify</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Find Artisan</a>
+      <a href="request.html">Request Service</a>
+    </div>
+  </nav>
+
+  <section class="directory">
+    <h2>Verified Artisans</h2>
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or skill..." onkeyup="filterArtisans()"/>
+      <select id="categoryFilter" onchange="filterArtisans()">
+        <option value="">All Categories</option>
+        <option value="Plumber">Plumber</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Painter">Painter</option>
+        <option value="Carpenter">Carpenter</option>
+        <option value="Welder">Welder</option>
+      </select>
+    </div>
+
+    <div class="artisan-grid" id="artisanGrid">
+
+      <div class="artisan-card" data-skill="Plumber">
+        <div class="artisan-avatar">JA</div>
+        <h3>James Adeyemi</h3>
+        <span class="badge">Plumber</span>
+        <p class="rating">⭐ 4.8 — 32 jobs completed</p>
+        <p class="location">📍 Zone 4, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Electrician">
+        <div class="artisan-avatar">SO</div>
+        <h3>Samuel Okafor</h3>
+        <span class="badge">Electrician</span>
+        <p class="rating">⭐ 4.6 — 47 jobs completed</p>
+        <p class="location">📍 Zone 2, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Painter">
+        <div class="artisan-avatar">FN</div>
+        <h3>Faith Nwosu</h3>
+        <span class="badge">Painter</span>
+        <p class="rating">⭐ 4.9 — 28 jobs completed</p>
+        <p class="location">📍 Zone 1, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Carpenter">
+        <div class="artisan-avatar">BI</div>
+        <h3>Biodun Ibrahim</h3>
+        <span class="badge">Carpenter</span>
+        <p class="rating">⭐ 4.7 — 19 jobs completed</p>
+        <p class="location">📍 Zone 3, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Welder">
+        <div class="artisan-avatar">KA</div>
+        <h3>Kunle Afolabi</h3>
+        <span class="badge">Welder</span>
+        <p class="rating">⭐ 4.5 — 23 jobs completed</p>
+        <p class="location">📍 Zone 5, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>CraftVerify — Built for Redemption City © 2026</p>
+  </footer>
+
+  <script>
+    function filterArtisans() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const category = document.getElementById('categoryFilter').value;
+      const cards = document.querySelectorAll('.artisan-card');
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        const skill = card.getAttribute('data-skill');
+        const matchSearch = name.includes(search);
+        const matchCategory = category === '' || skill === category;
+        card.style.display = matchSearch && matchCategory ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>
