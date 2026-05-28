@@ -552,4 +552,41 @@ footer a {
   color: #888;
   margin-bottom: 32px;
   font-size: 0.95rem;
+}/* ABOUT PAGE */
+.about-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.about-block {
+  margin-bottom: 60px;
+}
+
+.about-block h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #0a0a0a;
+}
+
+.about-block p {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.about-quote {
+  border-top: 2px solid #0a0a0a;
+  border-bottom: 2px solid #0a0a0a;
+  padding: 32px 0;
+  margin-top: 20px;
+}
+
+.about-quote p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.6;
 }
