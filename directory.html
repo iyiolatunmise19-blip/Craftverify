@@ -13,12 +13,19 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="directory.html">Find Artisan</a>
-      <a href="request.html">Request Service</a>
+      <a href="verify.html">How We Verify</a>
+      <a href="join.html">Join as Artisan</a>
+      <a href="about.html">About</a>
+      <a href="request.html" class="nav-cta">Request Service</a>
     </div>
   </nav>
 
   <section class="directory">
-    <h2>Verified Artisans</h2>
+    <div class="directory-header">
+      <h2>Verified Artisans</h2>
+      <p>Every listing manually reviewed</p>
+    </div>
+
     <div class="filter-bar">
       <input type="text" id="searchInput" placeholder="Search by name or skill..." onkeyup="filterArtisans()"/>
       <select id="categoryFilter" onchange="filterArtisans()">
@@ -28,6 +35,8 @@
         <option value="Painter">Painter</option>
         <option value="Carpenter">Carpenter</option>
         <option value="Welder">Welder</option>
+        <option value="Tiler">Tiler</option>
+        <option value="Mason">Mason</option>
       </select>
     </div>
 
@@ -37,7 +46,8 @@
         <div class="artisan-avatar">JA</div>
         <h3>James Adeyemi</h3>
         <span class="badge">Plumber</span>
-        <p class="rating">⭐ 4.8 — 32 jobs completed</p>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.8 — 32 jobs</p>
         <p class="location">📍 Zone 4, Redemption City</p>
         <a href="request.html" class="btn-small">Request Service</a>
       </div>
@@ -46,7 +56,8 @@
         <div class="artisan-avatar">SO</div>
         <h3>Samuel Okafor</h3>
         <span class="badge">Electrician</span>
-        <p class="rating">⭐ 4.6 — 47 jobs completed</p>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.6 — 47 jobs</p>
         <p class="location">📍 Zone 2, Redemption City</p>
         <a href="request.html" class="btn-small">Request Service</a>
       </div>
@@ -55,7 +66,8 @@
         <div class="artisan-avatar">FN</div>
         <h3>Faith Nwosu</h3>
         <span class="badge">Painter</span>
-        <p class="rating">⭐ 4.9 — 28 jobs completed</p>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.9 — 28 jobs</p>
         <p class="location">📍 Zone 1, Redemption City</p>
         <a href="request.html" class="btn-small">Request Service</a>
       </div>
@@ -64,7 +76,8 @@
         <div class="artisan-avatar">BI</div>
         <h3>Biodun Ibrahim</h3>
         <span class="badge">Carpenter</span>
-        <p class="rating">⭐ 4.7 — 19 jobs completed</p>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.7 — 19 jobs</p>
         <p class="location">📍 Zone 3, Redemption City</p>
         <a href="request.html" class="btn-small">Request Service</a>
       </div>
@@ -73,8 +86,79 @@
         <div class="artisan-avatar">KA</div>
         <h3>Kunle Afolabi</h3>
         <span class="badge">Welder</span>
-        <p class="rating">⭐ 4.5 — 23 jobs completed</p>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.5 — 23 jobs</p>
         <p class="location">📍 Zone 5, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Tiler">
+        <div class="artisan-avatar">EM</div>
+        <h3>Emmanuel Musa</h3>
+        <span class="badge">Tiler</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.7 — 15 jobs</p>
+        <p class="location">📍 Zone 2, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Mason">
+        <div class="artisan-avatar">TO</div>
+        <h3>Tunde Olawale</h3>
+        <span class="badge">Mason</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.4 — 31 jobs</p>
+        <p class="location">📍 Zone 6, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Plumber">
+        <div class="artisan-avatar">RO</div>
+        <h3>Rita Ojo</h3>
+        <span class="badge">Plumber</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.6 — 11 jobs</p>
+        <p class="location">📍 Zone 1, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Electrician">
+        <div class="artisan-avatar">CB</div>
+        <h3>Chidi Bassey</h3>
+        <span class="badge">Electrician</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.8 — 39 jobs</p>
+        <p class="location">📍 Zone 4, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Painter">
+        <div class="artisan-avatar">AA</div>
+        <h3>Amina Abdullahi</h3>
+        <span class="badge">Painter</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.5 — 17 jobs</p>
+        <p class="location">📍 Zone 3, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Carpenter">
+        <div class="artisan-avatar">PO</div>
+        <h3>Peter Ogundele</h3>
+        <span class="badge">Carpenter</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.9 — 44 jobs</p>
+        <p class="location">📍 Zone 5, Redemption City</p>
+        <a href="request.html" class="btn-small">Request Service</a>
+      </div>
+
+      <div class="artisan-card" data-skill="Tiler">
+        <div class="artisan-avatar">NK</div>
+        <h3>Ngozi Kalu</h3>
+        <span class="badge">Tiler</span>
+        <span class="verified-badge">✓ Verified</span>
+        <p class="rating">⭐ 4.6 — 22 jobs</p>
+        <p class="location">📍 Zone 2, Redemption City</p>
         <a href="request.html" class="btn-small">Request Service</a>
       </div>
 
@@ -82,7 +166,7 @@
   </section>
 
   <footer>
-    <p>CraftVerify — Built for Redemption City © 2026</p>
+    <p>CraftVerify — Built for Redemption City © 2026 &nbsp;|&nbsp; <a href="about.html">About</a></p>
   </footer>
 
   <script>
